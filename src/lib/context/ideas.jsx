@@ -3,7 +3,7 @@ import { databases } from "../appwrite";
 import { ID, Query } from "appwrite";
 
 export const IDEAS_DATABASE_ID = "664f8a49002f8e7f3f48"; // Replace with your database ID
-export const IDEAS_COLLECTION_ID = "664f8a49002f8e7f3f48"; // Replace with your collection ID
+export const IDEAS_COLLECTION_ID = "ideas-tracker"; // Replace with your collection ID
 
 const IdeasContext = createContext();
 

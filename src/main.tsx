@@ -8,7 +8,7 @@ ReactDOM.createRoot(document.getElementById('root')!).render(
    <HelmetProvider>
     <App />
     <Helmet>
-        <title>Candycrush</title>
+        <title>Blog</title>
         <meta name="viewport" content="initial-scale=1.0, width=device-width" />
         <link rel="icon" href="/favicon.ico" />
         <link

@@ -31,8 +31,8 @@ function Navbar() {
         {user.current ? (
 
           <>
-          
-            <span className="currentemail"><AccountCircleIcon/> {user.current.email}</span>
+            
+            <span className="currentemail"> <small>{user.current.labels}</small> <AccountCircleIcon/> {user.current.email}</span>
 
             <button type="button" onClick={() => user.logout()}>
               Logout
