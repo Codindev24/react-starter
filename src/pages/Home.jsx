@@ -56,7 +56,7 @@ export function Home() {
       <section>
         <h2>Latest Ideas</h2>
         <ul>
-          {ideas && ideas.current.map((idea) => (
+          {ideas.current.map((idea) => (
             <li key={idea.$id}>
               <strong>{idea.title}</strong>
               <p>{idea.description}</p>
