@@ -1,0 +1,36 @@
+@import 'base/base';
+@import 'base/colors';
+@import 'base/mixins';
+
+nav {
+ padding-top: 20px;
+ margin-bottom: 20px;
+
+a {
+ font-size: 16px;
+ @include oxygenl;
+ margin-left: 10px;
+ margin-right: 10px;
+}// a
+
+.user {
+
+span.currentemail {
+ font-size: 16px;
+ @include oxygenl;
+
+svg {
+ width: 20px;
+ height: 20px;
+}// svg
+
+}// span.currentemail
+
+button {
+ margin-left: 10px;
+ margin-right: 10px;
+}// button
+
+}// .user
+
+}// nav
