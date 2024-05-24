@@ -6,15 +6,9 @@ import "../sass/home.scss";
 export function Home() {
   const user = useUser();
   const ideas = useIdeas();
-  console.log(user);
   
   const [title, setTitle] = useState("");
   const [description, setDescription] = useState("");
-
-  const handleDelete = async () => {
-    db.ideas.delete(idea.$id)
-    setIdeas((prevState) => prevState.filter((i) => i.$id !== idea.$id))
-   }
 
   return (
     <div className="home">
@@ -66,7 +60,6 @@ export function Home() {
             <li key={idea.$id}>
               <strong>{idea.title}</strong>
               <p>{idea.description}</p>
-              {/* Show the remove button to idea owner. */}
               
               {user.current && user.current.$id === idea.userId && (
                 <button type="button" onClick={() => ideas.remove(idea.$id)}>
