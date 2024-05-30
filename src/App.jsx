@@ -1,54 +1,33 @@
-import { Login } from "./pages/Login";
 import { Home } from "./pages/Home";
-import { UserProvider, useUser } from "./lib/context/user";
+import { useState, useEffect } from 'react';
+import { createClient } from "@supabase/supabase-js";
 import AccountCircleIcon from '@mui/icons-material/AccountCircle';
-import "./sass/nav.scss";
+import "./sass/app.scss";
+
+const supabase = createClient("https://hdqsavcxdnrqtzqpxofj.supabase.co", "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImhkcXNhdmN4ZG5ycXR6cXB4b2ZqIiwicm9sZSI6ImFub24iLCJpYXQiOjE3MTY2MzIxMTMsImV4cCI6MjAzMjIwODExM30.w_bEXaTKIARv-k9mEYx9y2MZqvtoiIsvv4iI6rXGAo8");
 
 function App() {
-  const isLoginPage = window.location.pathname === "/login";
+  const [ideas, setIdeas] = useState([]);
+
+  useEffect(() => {
+    getIdeas();
+  }, []);
+
+  async function getIdeas() {
+    const { data } = await supabase.from("ideas").select();
+    setIdeas(data);
+  }
 
   return (
-    <div>
-      <UserProvider>
-        <Navbar /> {/* Add the navbar before page content */}
-        <main>{isLoginPage ? <Login /> : <Home />}</main>
-      </UserProvider>
+    <div className="app">
+
+      <ul>
+        {ideas.map((idea) => (
+          <li key={idea.title}>{idea.desc}</li>
+        ))}
+      </ul>
+
     </div>
-  );
-}
-
-function Navbar() {
-  const user = useUser();
-
-  return (
-
-    <nav className="flex justify-between">
-
-      <a href="/">Codindev / Quick blog</a>
-
-      <div className="user">
-
-        {user.current ? (
-
-          <>
-            
-            <span className="currentemail"> <small>{user.current.labels}</small> <AccountCircleIcon/> {user.current.email}</span>
-
-            <button type="button" onClick={() => user.logout()}>
-              Logout
-            </button>
-
-          </>
-
-        ) : (
-
-          <a href="/login">Login</a>
-
-        )}
-
-      </div>{/* .user */}
-      
-    </nav>
   );
 }
 

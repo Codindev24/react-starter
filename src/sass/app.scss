@@ -1,0 +1,54 @@
+@import 'base/base';
+@import 'base/colors';
+@import 'base/mixins';
+
+.app {
+
+.posttofb {
+
+.collapse {
+
+input {
+
+}// input
+
+.collapse-title {
+ @include oxygenl;
+ font-size: 20px;
+}// .collapse-title
+
+.collapse-content {
+
+input {
+ background: rgba($color: $dark, $alpha: .1);
+ color: white;
+ font-size: 24px;
+ @include oxygenl;
+ text-align: center;
+ width: 100% !important;
+ outline: none;
+ padding: 2px;
+ margin: 5px;
+ @include box;
+}// input
+
+button {
+ background: rgba($color: gray, $alpha: .4);
+ color: white;
+ font-size: 24px;
+ @include oxygenl;
+ width: 100%;
+ padding: 2px;
+ margin: 5px;
+ border: 1px solid rgba($color: gray, $alpha: .1);
+ border-radius: 5px;
+ @include box;
+}// button
+
+}// .collapse-content
+
+}// .collapse
+
+}// .posttofb
+
+}// .app
