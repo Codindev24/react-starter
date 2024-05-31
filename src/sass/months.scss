@@ -1,0 +1,47 @@
+@import 'base/base';
+@import 'base/colors';
+@import 'base/mixins';
+
+// Januar ////////////////////////////////////////
+.jan {
+
+div {
+
+table.table {
+
+}// table.table
+
+}// div
+
+.alls {
+
+span {
+ @include oxygenb;
+ margin-left: 15px;
+}// span
+
+}// .alls
+
+}// .jan
+
+// Februar //////////////////////////////////////
+.feb {
+
+div {
+
+ table.table {
+  border-left: 1px solid rgba($color: gray, $alpha: .2);
+ }// table.table
+ 
+ }// div
+
+.alls {
+
+ span {
+  @include oxygenb;
+  margin-left: 15px;
+ }// span
+ 
+ }// .alls
+
+}// .feb
