@@ -14,6 +14,7 @@ table.table {
 }// div
 
 .alls {
+ border-left: 1px solid rgba($color: gray, $alpha: .4);
 
 span {
  @include oxygenb;
@@ -36,6 +37,7 @@ div {
  }// div
 
 .alls {
+ border-left: 1px solid rgba($color: gray, $alpha: .4);
 
  span {
   @include oxygenb;
@@ -45,3 +47,192 @@ div {
  }// .alls
 
 }// .feb
+
+// Júní ///////////////////////////////////////
+.juni {
+
+div {
+
+table.table {
+ border-left: 1px solid rgba($color: gray, $alpha: .2);
+
+tbody {
+  
+ tr {
+ 
+ th {
+ 
+ &.minus {
+  color: red;
+  font-size: 18px;
+ }// &.minus
+ 
+ &.plus {
+  color: green;
+  font-size: 18px;
+ }// &.plus
+ 
+ }// th
+ 
+ td {
+ 
+ span {
+ 
+ &.minus {
+  color: red;
+  font-size: 18px;
+
+small {
+ color: gray;
+}// small 
+  
+ }// &.minus
+ 
+ &.plus {
+  color: green;
+  font-size: 18px;
+
+small {
+ color: gray;
+}// small 
+
+ }// &.plus
+ 
+ }// span
+ 
+ }// td
+ 
+ }// tr
+ 
+ }// tbody 
+ 
+}// table.table
+
+}// div
+
+.alls {
+ border-left: 1px solid rgba($color: gray, $alpha: .4);
+ 
+span {
+ @include oxygenb;
+ margin-left: 15px;
+
+&.borga {
+ color: red;
+
+small {
+ color: gray;
+}// small 
+
+}// &.borga
+
+&.gain {
+ color: green;
+ margin-left: 30px;
+
+small {
+ color: gray;
+}// small 
+
+}// &.gain
+
+}// span
+
+}// .alls
+
+}// .juni
+
+// Júlí ///////////////////////////////////////
+.juli {
+
+div {
+
+table.table {
+ border-left: 1px solid rgba($color: gray, $alpha: .2);
+
+tbody {
+   
+tr {
+
+th {
+
+&.minus {
+ color: red;
+ font-size: 18px;
+}// &.minus
+
+&.plus {
+ color: green;
+ font-size: 18px;
+}// &.plus
+
+}// th
+
+td {
+
+span {
+ 
+&.minus {
+ color: red;
+ font-size: 18px;
+
+small {
+color: gray;
+}// small 
+ 
+}// &.minus
+
+&.plus {
+ color: green;
+ font-size: 18px;
+
+small {
+color: gray;
+}// small 
+
+}// &.plus
+
+}// span
+  
+
+}// td
+
+}// tr
+
+}// tbody
+
+}// table.table
+
+}// div
+
+.alls {
+border-left: 1px solid rgba($color: gray, $alpha: .4);
+
+span {
+ @include oxygenb;
+ margin-left: 15px;
+
+&.borga {
+ color: red;
+
+small {
+ color: gray;
+}// small 
+
+}// &.borga
+
+&.gain {
+ color: green;
+ margin-left: 30px;
+
+small {
+ color: gray;
+}// small 
+
+}// &.gain
+
+}// span
+
+}// .alls
+
+}// .juli

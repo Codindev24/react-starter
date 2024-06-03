@@ -8,7 +8,7 @@ export default function Feb() {
 
        <div className="feb">
 
-       <div className="overflow-x-auto">
+       <div className="overflow-x-hidden">
       <table className="table">
         {/* head */}
         <thead>

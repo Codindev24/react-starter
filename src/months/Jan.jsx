@@ -8,7 +8,7 @@ export default function Jan() {
 
        <div className="jan">
 
-       <div className="overflow-x-auto">
+       <div className="overflow-x-hidden">
       <table className="table">
         {/* head */}
         <thead>
